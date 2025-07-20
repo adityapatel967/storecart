@@ -1,0 +1,51 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="abcdefg1234567890xyz" />
+  <title>store cart</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+  <div id="user-area"></div>
+
+  <div id="cart" onclick="openCart()">
+    🛒 Cart (<span id="cart-count">0</span>)
+  </div>
+
+  <h1>Store cart</h1>
+
+  <div id="controls">
+    <input type="text" id="search-box" placeholder="Search products..." oninput="searchProducts(this.value)" />
+    <select onchange="setTheme(this.value)">
+      <option value="default">Theme: Default</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+    </select>
+    <button onclick="toggleDarkMode()" class="theme-btn">🌙 Toggle Dark Mode</button>
+  </div>
+
+  <div id="product-list"></div>
+
+  <div id="cart-modal" class="hidden">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-summary"></p>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <div id="auth-modal" class="hidden">
+    <h3>Login / Register</h3>
+    <input type="text" id="auth-username" placeholder="Username" /> <br /><br />
+    <input type="password" id="auth-password" placeholder="Password" /> <br /><br />
+    <button onclick="loginUser()" class="theme-btn">Login</button>
+    <button onclick="registerUser()" class="theme-btn">Register</button>
+    <p id="auth-message"></p>
+    <button onclick="closeAuthModal()">Close</button>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
